@@ -1,0 +1,78 @@
+:root{
+    --color-neutral-900: #000010;
+    --color-neutral-800: #1E252F;
+    --color-neutral-700: #3B414D;
+    --color-neutral-600: #4D5460;
+    --color-neutral-500: #747B88;
+    --color-neutral-400: #9097A5;
+    --color-neutral-300: #B3BAC8;
+    --color-neutral-200: #C1C8D6;
+    --color-neutral-100: #C6CEDC;
+    --color-neutral-50: #CCD3E2;
+    --color-white: #ffffff;
+    --color-accent: #FC7B1F;
+}
+/*já vem um pré-padding, bom usar essa config abaixo para setar propriedades especificas e mais similares ao do design
+-> isso evita problemas futuros como:
+- uma caixa maior que a outra
+- quebra de caixa */
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    background-color: var(--color-neutral-900);
+    color: var(--color-white); 
+    font-family: 'Inter';
+}
+a{
+    color: var(--color-white);
+}
+/*a "caixa" chamada ul está alinhada com o titulo*/
+ul{
+    display: flex;
+    justify-content: space-between;
+   
+}
+ul li{
+    list-style-type: none;
+    background-color: var(--color-accent);
+    padding:10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+/*css não sabe renderizar altura, melhor não usar -> quais casos de uso? No caso de card como ele abraça o conteúdo, então não precisaria*/
+div.card{
+    padding: 24px 32px 32px 32px;
+    background-color: var(--color-neutral-800);
+    width: 413px;
+    border-radius: 32px;
+    flex-direction:column;
+    display:flex;
+}
+div.card p{
+    color: var(--color-neutral-400);
+    margin-bottom: 32px;
+}
+.exemplo{ background: red }
+
+button{
+    padding: 8px 16px;
+    background-color: var(--color-accent);
+    border-radius: 500px;
+    margin-top:24px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    letter-spacing: 1.28px;
+    font-size: 16px;
+    font-weight: 500;
+    min-width: 48px;
+
+    /*style: normal, italico, sublinhado -> não precisa por normal pq ja vem de fabrica*/
+    font-style: normal;
+}
+
